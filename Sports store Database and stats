@@ -1,0 +1,42 @@
+--Create a sports store database
+
+CREATE TABLE sports (id INTEGER PRIMARY KEY, name TEXT, isle INTEGER,  price integer, quantity INTEGER);
+
+INSERT INTO sports VALUES (1, "bat", 1, 100, 10);
+INSERT INTO sports VALUES (2, "baseball", 1, 5, 100);
+INSERT INTO sports VALUES (3, "mit", 1, 20, 18);
+INSERT INTO sports VALUES (4, "cup", 2, 5, 10);
+INSERT INTO sports VALUES (5, "water", 3, 1, 50);
+INSERT INTO sports VALUES (6, "gum", 3, 1, 25);
+INSERT INTO sports VALUES (7, "soda", 3, 5, 50);
+INSERT INTO sports VALUES (8, "basketball", 4, 10, 75);
+INSERT INTO sports VALUES (9, "basketballhoop", 4, 100, 5);
+INSERT INTO sports VALUES (10, "ballreturner", 2, 20, 8);
+INSERT INTO sports VALUES (11, "football", 5, 20, 30);
+INSERT INTO sports VALUES (12, "tee", 5, 5, 15);
+INSERT INTO sports VALUES (13, "glove", 5, 10, 20);
+INSERT INTO sports VALUES (14, "helmet", 5, 20, 25);
+INSERT INTO sports VALUES (15, "pads", 5, 30, 15);
+
+--display the database ordered by price.
+SELECT * FROM sports order by price DESC;
+SELECT SUM (quantity) FROM sports;
+
+--what is the avg price of items on isle 1?
+SELECT avg (price) "avg 1 isle price"
+From sports;
+
+--what are the 5 most expensive items?
+SELECT name, price "5 most expensive items"
+FROM sports
+order by price desc
+limit 5;
+
+
+
+
+
+
+
+
+
